@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      lang="en"
+      class="h-100"
+>
+<head>
+    <title layout:title-pattern="$CONTENT_TITLE - $LAYOUT_TITLE">Montiful</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/webjars/font-awesome/5.6.3/css/all.css}"/>
+    <!--https://material.io/tools/icons/?style=baseline-->
+    <link th:href="@{/static/css/common.css}" rel="stylesheet"/>
+</head>
+
+<body class="d-flex flex-column h-100 bg-light">
+<div layout:fragment="page_content" style="padding-top: 70px;"></div>
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/webjars/axios/0.18.0/dist/axios.min.js}"></script>
+<script th:src="@{/static/js/common.js}"></script>
+<th:block layout:fragment="includeScripts"></th:block>
+<th:block layout:fragment="scripts"></th:block>
+</body>
+
+</html>

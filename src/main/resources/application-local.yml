@@ -1,0 +1,32 @@
+info:
+  app:
+    name: spring-boot study application(local)
+
+spring:
+  thymeleaf:
+    cache: false #캐시를 로컬에서는 끔
+  devtools:
+    livereload:
+      enabled: true
+  datasource:
+    url: jdbc:h2:file:./test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE;CACHE_SIZE=131072;
+    platform: h2
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  jpa:
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        use_sql_comments: true
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        trace: false
+        web-allow-others: false

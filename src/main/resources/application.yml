@@ -1,0 +1,28 @@
+server:
+  port: 80
+  tomcat:
+    max-threads: 500
+    protocol-header: X-Forwarded-Proto
+  connection-timeout: 20s
+
+spring:
+  profiles:
+    active: local
+  http:
+    encoding:
+      enabled: true
+      charset: utf-8
+      force: true
+  mvc:
+    servlet:
+      load-on-startup: 1
+  thymeleaf:
+    suffix: .html
+management:
+  endpoint:
+    heapdump:
+      enabled: false
+  endpoints:
+    web:
+      base-path: /system/actuator #잘 알려진 URL 및 포트 등의 정보는 변경하는게 좋음
+
